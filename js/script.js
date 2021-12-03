@@ -35,7 +35,7 @@ function myFunction(){
 
     // dopo aver tentato con JSON.stringify, faccio un ciclo for di 5 ( ovvero i numeri presenti nell'array numbers, si sarebbe potuto usare anche .length).
     // girando sull'array ogni volta che;
-    let time = 3;
+    let time = 1;
 
     const timer = setInterval(() => {
         if (time > 0) {
@@ -46,9 +46,12 @@ function myFunction(){
             for (let i = 0; i < 5; i++) {
                 let userNumbers = parseInt(prompt("inserisci 5 numeri"));
                 console.log(userNumbers);
-                if (userNumbers == numbers[i]) {
-                    listNumbers.push(userNumbers);
-                    
+                for (let x = 0; x < numbers.length; x++) {
+                    if (userNumbers == numbers[x]) {
+                        listNumbers.push(userNumbers);
+                        
+                    }
+                       
                 }
             }
             console.log(listNumbers);
