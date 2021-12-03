@@ -35,7 +35,7 @@ function myFunction(){
 
     // dopo aver tentato con JSON.stringify, faccio un ciclo for di 5 ( ovvero i numeri presenti nell'array numbers, si sarebbe potuto usare anche .length).
     // girando sull'array ogni volta che;
-    let time = 30;
+    let time = 0;
 
     const timer = setInterval(() => {
         if (time > 0) {
@@ -48,12 +48,23 @@ function myFunction(){
                 console.log(userNumbers);
                 for (let x = 0; x < numbers.length; x++) {
                     if (userNumbers == numbers[x]) {
-                        listNumbers.push(userNumbers);
+                        // listNumbers.push(userNumbers);
+                        for (let y = 0; y < numbers.length; y++) {
+                            if (listNumbers.includes(userNumbers)) {
+                                
+                            }else {
+                                listNumbers.push(userNumbers);
+                            }
+                            
+                        }
                         
                     }
                        
                 }
             }
+
+
+
             console.log(listNumbers);
             container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
                I numeri che hai indovinati sono: ${listNumbers}</h1>`
