@@ -33,7 +33,7 @@ function myFunction(){
 
     // dopo aver tentato con JSON.stringify, faccio un ciclo for di 5 ( ovvero i numeri presenti nell'array numbers, si sarebbe potuto usare anche .length).
     // girando sull'array ogni volta che;
-    let time = 0;
+    let time = 30;
 
     const timer = setInterval(() => {
         if (time > 0) {
