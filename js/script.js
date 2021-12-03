@@ -46,36 +46,47 @@ function myFunction(){
             for (let i = 0; i < 5; i++) {
                 let userNumbers = parseInt(prompt("inserisci 5 numeri"));
                 console.log(userNumbers);
-                for (let x = 0; x < numbers.length; x++) {
-                    if (userNumbers == numbers[x]) {
-                        // listNumbers.push(userNumbers);
-                        for (let y = 0; y < numbers.length; y++) {
-                            if (listNumbers.includes(userNumbers)) {
+                console.log(isNaN(userNumbers));
+                while (userNumbers <= 0 || isNaN(userNumbers) == true ) {
+                    if (userNumbers <= 0) {
+                            userNumbers = parseInt(prompt("inserisci 1 numero maggiore di 0"));
+                    }else if (isNaN(userNumbers) == true ) {
+                        userNumbers = parseInt(prompt("inserisci 1 numero"));
+                    } else {
+                        for (let x = 0; x < numbers.length; x++) {
+                            if (userNumbers == numbers[x]) {
+                                // listNumbers.push(userNumbers);
+                                for (let y = 0; y < numbers.length; y++) {
+                                    if (listNumbers.includes(userNumbers)) {
+                                        
+                                    }else {
+                                        listNumbers.push(userNumbers);
+                                    }
+                                    
+                                }
                                 
-                            }else {
-                                listNumbers.push(userNumbers);
                             }
-                            
+                               
                         }
-                        
+    
                     }
-                       
+                    
                 }
             }
 
 
 
             console.log(listNumbers);
-            container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
-               I numeri che hai indovinati sono: ${listNumbers}</h1>`
+            // container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
+            //    I numeri che hai indovinati sono: ${listNumbers}</h1>`
             // dopo l'operazione descritta sopra vado a sovrascrivere l'html ed inserisco grazie ai `backtick` il mio testo: con il numero degli elementi indovinati (listNumbers.length) ed i numeri indovinati (listNumbers)
             
-            // if (listNumbers.length > 0) {
-            //    container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
-            //    I numeri che hai indovinati sono: ${listNumbers}</h1>`
-            // } else {
-            //    container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
-            // }
+            if (listNumbers.length > 0) {
+               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
+               I numeri che hai indovinati sono: ${listNumbers}</h1>`
+            } else {
+               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
+            }
         }
 
      }, 1000);
