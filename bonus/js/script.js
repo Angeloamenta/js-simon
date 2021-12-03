@@ -49,18 +49,15 @@ function myFunction(){
                     if (userNumbers == numbers[x]) {
                         listNumbers.push(userNumbers);
                         
-                    }else if (userNumbers <= 0)
-                    while (userNumbers <= 0 ) {
-                        userNumbers = parseInt(prompt("inserisci un numero maggiore di 0"));
+                    }else if (userNumbers <= 0){
+                        while (userNumbers <= 0 ) {
+                            userNumbers = parseInt(prompt("inserisci un numero maggiore di 0"));}
                     }else if (isNaN(userNumbers) == true){
                         while (isNaN(userNumbers) == true) {
-                            userNumbers = parseInt(prompt("inserisci 1 numero"));
-                        }
+                            userNumbers = parseInt(prompt("inserisci 1 numero"));}
                     }else if (userNumbers == listNumbers[x]){
                         while (userNumbers == listNumbers[x]) {
-                            userNumbers = parseInt(prompt("numero già inserito"));
-                            
-                        }
+                            userNumbers = parseInt(prompt("numero già inserito"));}
                     }
                 }
             }
@@ -69,7 +66,7 @@ function myFunction(){
             
             console.log(listNumbers);
             container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
-               I numeri che hai indovinati sono: ${listNumbers}</h1>`
+               I numeri indovinati sono: ${listNumbers}</h1>`
             // dopo l'operazione descritta sopra vado a sovrascrivere l'html ed inserisco grazie ai `backtick` il mio testo: con il numero degli elementi indovinati (listNumbers.length) ed i numeri indovinati (listNumbers)
             
             // if (listNumbers.length > 0) {
