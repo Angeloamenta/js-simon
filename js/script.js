@@ -47,11 +47,14 @@ function myFunction(){
                 let userNumbers = parseInt(prompt("inserisci 5 numeri"));
                 console.log(userNumbers);
                 console.log(isNaN(userNumbers));
-                while (userNumbers <= 0 || isNaN(userNumbers) == true ) {
+                while (userNumbers <= 0 || isNaN(userNumbers) == true || listNumbers.includes(userNumbers) ) {
+
                     if (userNumbers <= 0) {
                             userNumbers = parseInt(prompt("inserisci 1 numero maggiore di 0"));
-                    }else if (isNaN(userNumbers) == true ) {
+                            
+                    } else if (isNaN(userNumbers) == true ) {
                         userNumbers = parseInt(prompt("inserisci 1 numero"));
+
                     } else {
                         for (let x = 0; x < numbers.length; x++) {
                             if (userNumbers == numbers[x]) {
