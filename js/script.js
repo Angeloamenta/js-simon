@@ -48,27 +48,27 @@ function myFunction(){
             console.log(time)
         }else{
             clearInterval(timer)
-        }
-
-        for (let i = 0; i < 5; i++) {
-            let userNumbers = parseInt(prompt("inserisci 5 numeri"));
-            console.log(userNumbers);
-            if (userNumbers == numbers[i]) {
-                listNumbers.push(userNumbers);
-                
+            for (let i = 0; i < 5; i++) {
+                let userNumbers = parseInt(prompt("inserisci 5 numeri"));
+                console.log(userNumbers);
+                if (userNumbers == numbers[i]) {
+                    listNumbers.push(userNumbers);
+                    
+                }
+            }
+            console.log(listNumbers);
+            
+            // dopo l'operazione descritta sopra vado a sovrascrivere l'html ed inserisco grazie ai `backtick` il mio testo: con il numero degli elementi indovinati (listNumbers.length) ed i numeri indovinati (listNumbers)
+            
+            if (listNumbers.length > 0) {
+               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
+               I numeri che hai indovinati sono: ${listNumbers}</h1>`
+            } else {
+               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
             }
         }
-        console.log(listNumbers);
-        
-        // dopo l'operazione descritta sopra vado a sovrascrivere l'html ed inserisco grazie ai `backtick` il mio testo: con il numero degli elementi indovinati (listNumbers.length) ed i numeri indovinati (listNumbers)
-        
-        if (listNumbers.length > 0) {
-           container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
-           I numeri che hai indovinati sono: ${listNumbers}</h1>`
-        } else {
-           container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
-        }
-     }, 5000);
+
+     }, 1000);
  
 }
 console.log(JSON.stringify(numbers));
