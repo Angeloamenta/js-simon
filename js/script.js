@@ -25,3 +25,18 @@ console.log(numbers.length);
 console.log("lista numeri ", numbers);
 
 // dopo 30 secondi il contenuto di container sparisce
+// imposto un timer e faccio sparire il contenuto con innerHTML sostituendo con una stringa vuota
+setTimeout(myFunction, 3000);
+
+function myFunction(){
+    container.innerHTML = "";
+    // chiedo al''utente di inserire 5 numeri e lo faccio con un prompt ed un for che cicla per 5 volte la domanda
+    for (let i = 0; i < 5; i++) {
+        let userNumbers = parseInt(prompt("inserisci 5 numeri"));
+        console.log(userNumbers);
+        listNumbers.push(userNumbers);
+    }
+    console.log(listNumbers);
+}
+
+
