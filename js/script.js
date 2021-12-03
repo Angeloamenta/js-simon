@@ -34,13 +34,8 @@ function myFunction(){
     // chiedo al''utente di inserire 5 numeri e lo faccio con un prompt ed un for che cicla per 5 volte la domanda
 
     // dopo aver tentato con JSON.stringify, faccio un ciclo for di 5 ( ovvero i numeri presenti nell'array numbers, si sarebbe potuto usare anche .length).
-    // girando sull'array ogni volta che:
-
-    // userNumbers ( quello inserito dall'utente) è == a numbers[i] ovvero un elemento presente nell'array numbers, il numero verrà pushato nell'array vuoto chiamato list numbers
-    
-
-    // messo un timer prima di permettere all'utente di dare il suo numero
-    let time = 10;
+    // girando sull'array ogni volta che;
+    let time = 3;
 
     const timer = setInterval(() => {
         if (time > 0) {
@@ -57,15 +52,16 @@ function myFunction(){
                 }
             }
             console.log(listNumbers);
-            
+            container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
+               I numeri che hai indovinati sono: ${listNumbers}</h1>`
             // dopo l'operazione descritta sopra vado a sovrascrivere l'html ed inserisco grazie ai `backtick` il mio testo: con il numero degli elementi indovinati (listNumbers.length) ed i numeri indovinati (listNumbers)
             
-            if (listNumbers.length > 0) {
-               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
-               I numeri che hai indovinati sono: ${listNumbers}</h1>`
-            } else {
-               container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
-            }
+            // if (listNumbers.length > 0) {
+            //    container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri. <br>
+            //    I numeri che hai indovinati sono: ${listNumbers}</h1>`
+            // } else {
+            //    container.innerHTML = `<h1>Hai indovinato ${listNumbers.length} numeri.</h1>`
+            // }
         }
 
      }, 1000);
