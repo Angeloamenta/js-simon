@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.title-cont {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.select-lvl{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.label-diff {
+    line-height: 40px;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+#difficulty {
+    width: 100px;
+    height: 40px;
+    background-color: blueviolet;
+    border: 0;
+    color: white;
+    border-radius: 25px;
+    margin: 0 15px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+.button-play {
+    width: 100px;
+    height: 40px;
+    background-color: blueviolet;
+    border: 0;
+    color: white;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    background-color: blueviolet;
+    width: 150px;
+    height: 150px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;
+}
+
+.cell h2 {
+    font-size: 3em;
+}
+
+.txt {
+    width: 45px;
+border-radius: 50px;
+text-align: center;
+border: 2px solid blueviolet;
+height: 45px;
+font-size: 100%;
+}
